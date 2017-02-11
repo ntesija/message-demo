@@ -13,17 +13,18 @@ messageSystem = {
 			<p>" + msg + "</p> \
 		</msg>");
 		setTimeout( function() {
-			$('#' + id).fadeOut('fast');
+			$('#' + id).fadeOut('fast', function() { $(this).remove(); });
 		}, 3000);
 		this.messageId++;
     },
 	messageId: 0,
 	getRandomColorString: function() {
+		//Creates a string with random rgb values on the lighter side of the scale (150+)
 		var rgb = "(" + (Math.floor(Math.random() * (255 - 150)) + 150) + "," + (Math.floor(Math.random() * (255 - 150)) + 150) + "," + (Math.floor(Math.random() * (255 - 150)) + 150) + ")"
 		return rgb;
 	},
 	closeMessage: function(id) {
-		$('#' + id).fadeOut('fast');
+		$('#' + id).fadeOut('fast', function() { $(this).remove(); });
 	}
 }
 
