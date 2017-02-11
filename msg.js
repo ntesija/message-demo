@@ -5,8 +5,14 @@ var loopHandle = null;
 // is appropriate
 messageSystem = {
     showMessage: function(msg) {
-        alert(msg);
-    }
+		var id = this.messageId;
+		$("#message-container").append("<div class='message' id='" + id + "'>" + msg + "</msg>");
+		setTimeout( function() {
+			$('#' + id).fadeOut('fast');
+		}, 3000);
+		this.messageId++;
+    },
+	messageId: 0
 }
 
 
