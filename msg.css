@@ -5,3 +5,23 @@
     width: 99%;
     height: 24px;
 }
+
+.message {
+	text-align: center;
+	vertical-align: middle;
+	font-size: large;
+	width: 40%;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.close {
+	cursor: pointer;
+	margin: 10px;
+	color: red;
+	width: 5px;
+	height: 5px;
+	float: left;
+}

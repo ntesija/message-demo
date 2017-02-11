@@ -6,13 +6,25 @@ var loopHandle = null;
 messageSystem = {
     showMessage: function(msg) {
 		var id = this.messageId;
-		$("#message-container").append("<div class='message' id='" + id + "'>" + msg + "</msg>");
+		var color = this.getRandomColorString();
+		$("#message-container").append(
+		"<div class='message' id='" + id + "' style='background-color:rgb" + color + ";'> \
+			<span class='close' onClick='messageSystem.closeMessage(" + id + ")'>X</span> \
+			<p>" + msg + "</p> \
+		</msg>");
 		setTimeout( function() {
 			$('#' + id).fadeOut('fast');
 		}, 3000);
 		this.messageId++;
     },
-	messageId: 0
+	messageId: 0,
+	getRandomColorString: function() {
+		var rgb = "(" + (Math.floor(Math.random() * (255 - 150)) + 150) + "," + (Math.floor(Math.random() * (255 - 150)) + 150) + "," + (Math.floor(Math.random() * (255 - 150)) + 150) + ")"
+		return rgb;
+	},
+	closeMessage: function(id) {
+		$('#' + id).fadeOut('fast');
+	}
 }
 
 
