@@ -1,3 +1,12 @@
+body {
+	background-color: #cacaca;
+}
+
+#message-container {
+	width: 100%;
+	position: fixed;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -13,8 +22,8 @@
 	width: 40%;
 	border: 1px solid black;
 	border-radius: 10px;
-	margin-top: 10px;
 	padding: 5px;
+	margin: 5px auto;
 }
 
 .close {
@@ -24,4 +33,25 @@
 	width: 5px;
 	height: 5px;
 	float: left;
+}
+
+.specification {
+	width: 28%;
+}
+
+.message-btn {
+	border-radius: 5px;
+	color: white;
+	font-size: large;
+	padding: 15px;
+}
+
+.start-message-btn {
+	background-color: #00cc00;
+	border: 1px solid #009944;
+}
+
+.stop-message-btn {
+	background-color: #cc0000;
+	border: 1px solid #994400;
 }

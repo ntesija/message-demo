@@ -58,9 +58,13 @@ $(function() {
       btnTxt = btn.text();
        if (btnTxt === 'Start Messages') {
            btn.text('Stop Messages');
+		   btn.removeClass("start-message-btn");
+		   btn.addClass("stop-message-btn");
            loopHandle = setTimeout(loop, 500);
        } else {
            btn.text('Start Messages');
+		   btn.removeClass("stop-message-btn");
+		   btn.addClass("start-message-btn");
            clearTimeout(loopHandle);
            loopHandle = null;
        }
